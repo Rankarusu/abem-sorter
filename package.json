@@ -1,0 +1,73 @@
+{
+  "name": "abem-sorter",
+  "displayName": "ABEM Sorter",
+  "description": "Sorts your HTML Classesby BEM-prefixes or alphabetically",
+  "version": "0.0.1",
+  "engines": {
+    "vscode": "^1.66.0"
+  },
+  "categories": [
+    "Other"
+  ],
+  "activationEvents": [
+    "onCommand:abem-sorter.sortAbemClasses"
+  ],
+  "main": "./dist/extension.js",
+  "contributes": {
+    "commands": [
+      {
+        "command": "abem-sorter.sortAbemClasses",
+        "title": "Sort HTML Classes (ABEM-Sorter)"
+      }
+    ],
+    "configuration": {
+      "title": "ABEM-Sorter",
+      "properties": {
+        "abem-sorter.sortOrder": {
+          "type": "array",
+          "default": [
+            "lp",
+            "x",
+            "o",
+            "c",
+            "u"
+          ],
+          "description": "Specifies the order of ABEM-Prefixes to sort by. e.g: lp-header > o-copy"
+        }
+      }
+    }
+  },
+  "scripts": {
+    "vscode:prepublish": "npm run package",
+    "compile": "webpack",
+    "watch": "webpack --watch",
+    "package": "webpack --mode production --devtool hidden-source-map",
+    "compile-tests": "tsc -p . --outDir out",
+    "watch-tests": "tsc -p . -w --outDir out",
+    "pretest": "npm run compile-tests && npm run compile && npm run lint",
+    "lint": "eslint src --ext ts",
+    "test": "node ./out/test/runTest.js"
+  },
+  "devDependencies": {
+    "@types/glob": "^7.2.0",
+    "@types/mocha": "^9.1.0",
+    "@types/node": "14.x",
+    "@types/vscode": "^1.66.0",
+    "@typescript-eslint/eslint-plugin": "^5.18.0",
+    "@typescript-eslint/parser": "^5.16.0",
+    "@vscode/test-electron": "^2.1.3",
+    "eslint": "^8.12.0",
+    "eslint-config-airbnb-base": "^15.0.0",
+    "eslint-config-airbnb-typescript": "^17.0.0",
+    "eslint-config-airbnb-typescript-prettier": "^5.0.0",
+    "eslint-plugin-import": "^2.26.0",
+    "eslint-plugin-prettier": "^4.0.0",
+    "glob": "^7.2.0",
+    "mocha": "^9.2.2",
+    "prettier": "^2.6.2",
+    "ts-loader": "^9.2.8",
+    "typescript": "^4.6.3",
+    "webpack": "^5.70.0",
+    "webpack-cli": "^4.9.2"
+  }
+}
