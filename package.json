@@ -19,6 +19,7 @@
   "categories": [
     "Other"
   ],
+  "publisher": "Rankarusu",
   "repository": "https://github.com/Rankarusu/abem-sorter",
   "activationEvents": [
     "onCommand:abem-sorter.sortAbemClasses"
