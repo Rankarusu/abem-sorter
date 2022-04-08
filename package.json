@@ -3,12 +3,23 @@
   "displayName": "ABEM Sorter",
   "description": "Sorts your HTML Classesby BEM-prefixes or alphabetically",
   "version": "0.0.1",
+  "keywords": [
+    "HTML",
+    "CSS",
+    "sort",
+    "Atomic",
+    "BEM",
+    "ABEM",
+    "sorter",
+    "vscode"
+  ],
   "engines": {
     "vscode": "^1.66.0"
   },
   "categories": [
     "Other"
   ],
+  "repository": "https://github.com/Rankarusu/abem-sorter",
   "activationEvents": [
     "onCommand:abem-sorter.sortAbemClasses"
   ],
