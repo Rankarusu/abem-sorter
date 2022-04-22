@@ -2,7 +2,7 @@
   "name": "abem-sorter",
   "displayName": "ABEM Sorter",
   "description": "Sorts your HTML Classesby BEM-prefixes or alphabetically",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "keywords": [
     "HTML",
     "CSS",
