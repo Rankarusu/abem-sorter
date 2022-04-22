@@ -5,13 +5,15 @@ import * as vscode from "vscode";
 
 // this method is called when your extension is activated
 // your extension is activated the very first time the command is executed
+
+const acceptedLanguages = ["html", "php"];
 export function activate(context: vscode.ExtensionContext): void {
   const disposable = vscode.commands.registerCommand(
     "abem-sorter.sortAbemClasses",
     () => {
       // get all text of current document
       const editor = vscode.window.activeTextEditor;
-      if (editor && editor.document.languageId === "html") {
+      if (editor && acceptedLanguages.includes(editor.document.languageId)) {
         const doc = editor.document;
         const re = /(\s*<.*class=")(.*?)(".*>)/;
         const { sortOrder } = vscode.workspace.getConfiguration("abem-sorter");
